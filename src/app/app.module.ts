@@ -1,15 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {RouterModule, Routes} from "@angular/router";
-
+import { RouterModule, Routes } from "@angular/router";
+import { HttpClientModule } from '@angular/common/http'
 import { AppComponent } from './app.component';
-import {HomeComponent} from './components/home/home.component';
-import {SearchComponent} from './components/search/search.component';
-import {ArtistComponent} from './components/artist/artist.component';
-import {NavbarComponent} from './share/navbar/navbar.component';
+import { HomeComponent } from './components/home/home.component';
+import { SearchComponent } from './components/search/search.component';
+import { ArtistComponent } from './components/artist/artist.component';
+import { NavbarComponent } from './share/navbar/navbar.component';
 
 // importar rutas
-import {ROUTES} from "./app.routes";
+import { ROUTES } from "./app.routes";
 
 //clase90
 
@@ -23,7 +23,8 @@ import {ROUTES} from "./app.routes";
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(ROUTES, {useHash: true})
+    HttpClientModule,
+    RouterModule.forRoot(ROUTES, { useHash: true })
   ],
   providers: [],
   bootstrap: [AppComponent]
